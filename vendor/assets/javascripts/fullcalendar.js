@@ -23,9 +23,9 @@ var defaults = {
 	header: {
 		left: 'title',
 		center: '',
-		right: 'today prev, next, basicDay'
+		right: 'today prev, next'
 	},
-	weekends: false,
+	weekends: true,
 	weekNumbers: false,
 	weekNumberCalculation: 'iso',
 	weekNumberTitle: 'W',
