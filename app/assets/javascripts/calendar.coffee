@@ -1,29 +1,31 @@
 $ ->
   $('#calendar').fullCalendar({
     
+    height: 600
+    defaultView: 'agendaWeek'
     weekends: false
     weekNumbers: true
-    header: (left: 'title', center: '', right: 'today prev, next, agendaDay, month')
-    titleFormat: (month: 'MMMM yyyy', day: 'dddd, d MMM, yyyy')
+    header: (left: 'title', center: '', right: 'today prev, next, agendaWeek, agendaDay')
+    titleFormat: (week: 'MMMM yyyy', day: 'dddd, d MMM, yyyy')
     weekNumberTitle: 'Week'
-    buttonText: (today: 'view today', month: 'view month', day: 'view day')
+    buttonText: (today: 'view today', week: 'view week', day: 'view day')
 
     slotMinutes: 30
     minTime: 8
     timeFormat: 'H(:mm)'
     axisFormat: 'HH:mm'
-    columnFormat: (month: 'dddd', day: 'dddd d MMM')
+    columnFormat: (week: 'dddd d/M', day: 'dddd d MMM')
 
     selectable: true
-    select: (title, startDate, endDate, allDay) ->
+    select: (start, end, allDay, view) ->
      title = prompt("Please enter your name:", "Your name")
      calendar.fullCalendar "renderEvent",
        title: title
-       start: startDate
-       end: endDate
-     stick
-
-    unselect: (view) ->
+       start: start
+       end: end
+       allDay: allDay
+     true
+     calendar.fullCalendar('unselect')
 
     eventClick: (calEvent, jsEvent, view) ->
       alert "Event: " + calEvent.title
