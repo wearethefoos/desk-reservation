@@ -1,6 +1,8 @@
 $ ->
   $('#calendar').fullCalendar({
     
+    events: 'https://www.google.com/calendar/feeds/springest.com_b6d1o53kio2u3kb11h1aed231k%40group.calendar.google.com/public/basic'
+    
     height: 600
     defaultView: 'agendaWeek'
     weekends: false

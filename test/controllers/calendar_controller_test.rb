@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class CalendarControllerTest < ActionController::TestCase
-  test "should get home" do
-    get :home
+  test "should get create" do
+    get :create
     assert_response :success
   end
 
