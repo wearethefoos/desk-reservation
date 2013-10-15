@@ -11,7 +11,6 @@ end
 gem 'bower-rails'
 gem 'fullcalendar-rails'
 gem 'google_calendar'
-gem 'google-api-client'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'

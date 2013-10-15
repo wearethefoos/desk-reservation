@@ -1,0 +1,13 @@
+defaults: &defaults
+  username: <%= ENV['GOOGLE_CAL_API_USER'] %>
+  password: <%= ENV['GOOGLE_CAL_API_PASS'] %>
+  app_name: <%= ENV['GOOGLE_CAL_API_APP'] %>
+
+test:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
